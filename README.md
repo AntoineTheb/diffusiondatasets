@@ -1,4 +1,6 @@
-# diffusiondatasets
+# diffusion datasets
+
+Collection of publicly available datasets I've used or considered using in the past and may be useful eventually.
 
 ## Datasets with annotated bundles
 
