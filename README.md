@@ -57,6 +57,27 @@
 - Siemens Magnetom 1.5T; 2 mm isotropic; b=1000 s/mm², 64 directions + 1 b0; reverse-phase b0; TE/TR=98/11000 ms. T1w at 1 mm.
 - Processing reference: [TractoFlow — Théaud et al., 2020](https://doi.org/10.1016/j.neuroimage.2020.116889).
 
+### MASiVar
+
+- [Download](https://openneuro.org/datasets/ds003416/versions/2.0.2).
+- Paper: [Cai et al., 2021](https://doi.org/10.1002/mrm.28926).
+- 319 diffusion scans across 14 adults, 83 children, three sites and four 3T scanners. Within-scanner repeats and traveling participants; protocols span b=1000–3000 s/mm².
+- Raw data and PreQual derivatives.
+
+### Multi-b-value longitudinal test–retest — ds008695
+
+- [Download](https://openneuro.org/datasets/ds008695/versions/1.0.0).
+- Paper: [Pieciak et al., 2026](https://doi.org/10.64898/2026.08.23.746449) (preprint).
+- 11 participants; two complete test/retest blocks about one week apart, each split across two acquisition sessions.
+- 3T, 2.5 mm acquired resolution; 22 nonzero b-values spanning 10–3000 s/mm². Raw and processed DWI, DTI maps and bundle streamlines.
+
+### MASSIVE
+
+- [Download](https://www.massive-data.org/).
+- Paper: [Froeling et al., 2017](https://doi.org/10.1002/mrm.26259).
+- One participant, 18 visits, 8000 diffusion volumes. 3T, 2.5 mm isotropic; five shells at b=500/1000/2000/3000/4000 s/mm² plus Cartesian grids reaching b=9000.
+- Raw and processed variants, gradient tables, noise maps and structural MRI.
+
 ## Phantoms
 
 ### FiberCup
@@ -85,6 +106,13 @@
 - 99 HCP-derived participants; 71 reference bundles each; simulated T1w/T2w and DWI.
 - Clinical: 2.5 mm, 32 directions at b=1000 s/mm² + 1 b0. Intermediate: 2 mm, 30 directions/shell at b=1000/2000/3000 s/mm² + 9 b0. HCP-like: 1.25 mm, 90 directions/shell at the same b-values + 18 b0.
 - Each protocol has versions with and without added artifacts; both include Gaussian noise. TractSeg/MITK reference bundles, Fiberfox simulation.
+
+### DiSCo
+
+- [Download](https://data.mendeley.com/datasets/fgf86jdfg6/3).
+- Paper: [Rafael-Patino et al., 2021](https://doi.org/10.1016/j.dib.2021.107429).
+- Three Monte Carlo phantoms in the current release; 16 connected regions each. Four shells at b=1000/1925/3094/13191 s/mm², 90 directions/shell, several noise levels.
+- Ground-truth strand trajectories, connectivity matrices, diameters, volume fractions and orientation distributions.
 
 ## Tumors / lesions
 
@@ -134,6 +162,20 @@
 - LTE: b=100/800/2000 s/mm², 10/64/20 volumes. PTE: b=100/800 s/mm², 6/10 volumes. STE: b=2000 s/mm², 30 volumes. Combined: 146 volumes including 6 b0; separate reverse-phase b0.
 - Raw/preprocessed DWI, T1-MPRAGE, T2-FLAIR, bval/bvec/bten files and processing script. MP-PCA, Gibbs correction, TOPUP/EDDY and BET.
 
+### Szczepankiewicz / Hoge / Westin 2019
+
+- [Download ZIP](https://github.com/filip-szczepankiewicz/Szczepankiewicz_DIB_2019/archive/refs/heads/master.zip).
+- Paper: [Szczepankiewicz et al., 2019](https://doi.org/10.1016/j.dib.2019.104208).
+- One healthy participant plus water, oil and liquid-crystal phantoms. Brain acquisition uses LTE/PTE/STE at b=100/700/1400/2000 s/mm²; TE/TR=91/3200 ms, 25 axial slices.
+- Raw and motion/eddy-corrected data, gradient waveforms and encoding metadata.
+
+### Topgaard diffusion-tensor-distribution phantom
+
+- [Download ZIP](https://github.com/daniel-topgaard/md-dmri-data/archive/refs/heads/master.zip).
+- Paper: [Topgaard, 2019](https://doi.org/10.1002/nbm.4066).
+- Physical liquid-crystal and polymer-solution phantoms. 11.7T, 0.6×0.6×1 mm; eight b-values spanning 22–11,136 s/mm², four b-tensor anisotropies (−0.5/0/0.5/1), 15 orientations per combination.
+- Raw Bruker data, NIfTI images and fitted maps in `Topgaard_NMRBiomed2019`.
+
 ## Multi-TE
 
 ### SciDB
@@ -145,6 +187,13 @@
 - b=700/2000 s/mm², 30 directions/shell; 4 b0 per acquisition, 2 AP + 2 PA. Fixed δ/Δ=15.2/25.2 ms across TE and b.
 - MP-PCA, TOPUP/EDDY and FLIRT across TEs, with b-vector rotation.
 
+### LINC multidimensional post-mortem MRI
+
+- [Human download](https://dandiarchive.org/dandiset/001278/draft/files?location=) · [Macaque download](https://dandiarchive.org/dandiset/001372/draft/files?location=).
+- Paper: [Gong et al., 2026](https://doi.org/10.64898/2026.02.18.705310) (preprint).
+- Two human hemispheres: 3T, 500 mT/m; multi-TE diffusion at 1 mm isotropic, TE=42/55/70/88 ms, six shells reaching b=25,000 s/mm². Additional 0.4 mm multi-shell data.
+- Four macaque brains: 4.7T, 660 mT/m; 0.5 mm multidimensional diffusion, six TEs spanning 28–78 ms, three diffusion times, b up to 64,000 s/mm². Additional 0.25 mm diffusion data.
+
 ## Diffusion-time variation / strong gradients
 
 ### MGH Connectome Diffusion Microstructure Dataset
@@ -155,3 +204,19 @@
 - 3T Connectome, 300 mT/m gradients; pulsed-gradient LTE; 2 mm isotropic; FOV 216×216 mm; TE/TR=77/3800 ms; δ=8 ms, Δ=19/49 ms.
 - 16 shells spanning b=50–17800 s/mm²; 32 directions below b=2400, 64 otherwise. 800 diffusion-weighted volumes + 50 b0; 5 reverse-phase b0.
 - Preprocessed magnitude DWI, T1w, masks and FreeSurfer derivatives; real-valued DWI for 14 participants. Gradient-nonlinearity correction and TOPUP/EDDY, including slice-to-volume correction.
+
+### Connectome 2.0 — in vivo
+
+- [Download](https://openneuro.org/datasets/ds006181/versions/1.0.0).
+- Paper: [Ramos-Llordén et al., 2025](https://doi.org/10.1038/s41551-025-01457-x).
+- One publicly released participant. 3T, gradients up to 500 mT/m, 2 mm isotropic.
+- δ=6 ms, Δ=13/30 ms, TE=53 ms; eight shells per diffusion time, b=50–17,800 s/mm² overall. Raw and preprocessed DWI plus T1w.
+
+## Ex-vivo / tractography validation
+
+### IronTract
+
+- [Download](https://dandiarchive.org/dandiset/001289/draft).
+- Paper: [Maffei et al., 2022](https://doi.org/10.1016/j.neuroimage.2022.119327).
+- Two ex-vivo macaque brains. 4.7T, 0.7 mm isotropic; Cartesian DSI with 514 diffusion-weighted volumes + 1 b0, bmax=40,000 s/mm². Resampled two-shell data at approximately b=6000/12000 are also included.
+- Public annotations are tracer-injection masks; the full tracer-defined pathway masks are absent from this deposit.
